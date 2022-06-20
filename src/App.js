@@ -24,22 +24,21 @@ const Apps = () => {
                     </ul>
                 </nav>
 
-                <Switch>
                     {/* <Route exact component={<PrivateRoute />}>
                         <Route exact path="/home" element={<Home />} />
                     </Route>
                     <Route exact component={<PrivateRoute />}>
                         <Route exact path="/login" element={<Login />} />
                     </Route> */}
-                    <Route  path="/login">
-                        <Login />
-                    </Route>
-                    <Route path="/home">
+                    <Route  component={Login}  path="/login"/>
+                  
+                     <PrivateRoute path="/home" component={Home} />
+                    {/* <Route path="/home">
                         <Home />
-                    </Route>
+                    </Route> */}
 
 
-                </Switch>
+      
             </div>
         </Router>
     );
